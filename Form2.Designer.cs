@@ -156,12 +156,13 @@
             // 
             // InitButton
             // 
+            this.InitButton.BackColor = System.Drawing.SystemColors.ControlDark;
             this.InitButton.Location = new System.Drawing.Point(502, 73);
             this.InitButton.Name = "InitButton";
             this.InitButton.Size = new System.Drawing.Size(143, 49);
             this.InitButton.TabIndex = 12;
             this.InitButton.Text = "Init";
-            this.InitButton.UseVisualStyleBackColor = true;
+            this.InitButton.UseVisualStyleBackColor = false;
             this.InitButton.Click += new System.EventHandler(this.InitButton_Click);
             // 
             // Form2
