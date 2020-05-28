@@ -8,7 +8,7 @@ namespace WindowsFormsApp3
 {
     public class Team
     {
-        public string OmschrijvingTeam { get; set; }
+        public string name { get; set; }
         public Coach coachje { get; set; }
         public List<Speler> teamleden = new List<Speler>();
     }

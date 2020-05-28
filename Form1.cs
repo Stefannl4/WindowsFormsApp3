@@ -13,7 +13,7 @@ namespace WindowsFormsApp3
     public partial class Form1 : Form
     {
 
-        Auto auto1 = new Auto("aanmelden?");
+    
 
         public Form1()
         {
@@ -22,11 +22,7 @@ namespace WindowsFormsApp3
 
         private void button1_Click(object sender, EventArgs e)
         {            
-            auto1.bijzonderheden = "";
-            auto1.setOmschrijvig("Stefan ");
-            auto1.setOmschrijvig("de ");
-            auto1.setOmschrijvig("Lange");
-            label1.Text = auto1.getOmschrijving();
+ 
 
         }
 

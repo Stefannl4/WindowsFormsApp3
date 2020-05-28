@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\Documents\- C# Leren\AutoObjectenDefensie.cs" />
+    <Compile Include="Countries.cs" />
     <Compile Include="Team.cs" />
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
@@ -79,6 +79,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\Country.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

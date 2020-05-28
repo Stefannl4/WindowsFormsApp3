@@ -14,4 +14,5 @@ namespace WindowsFormsApp3
         public string bijzonderheden { get; set; }
         public string aanmelding { get; set; }
     }
+
 }

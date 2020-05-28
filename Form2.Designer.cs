@@ -2,6 +2,7 @@
 {
     partial class Form2
     {
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -28,7 +29,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.CoachField = new System.Windows.Forms.TextBox();
@@ -41,15 +44,21 @@
             this.label5 = new System.Windows.Forms.Label();
             this.TeamField = new System.Windows.Forms.TextBox();
             this.InitButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox1
             // 
+            this.comboBox1.DataSource = this.bindingSource1;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(221, 23);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 28);
             this.comboBox1.TabIndex = 0;
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataSource = typeof(WindowsFormsApp3.Country);
             // 
             // label1
             // 
@@ -178,6 +187,7 @@
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,5 +208,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TeamField;
         private System.Windows.Forms.Button InitButton;
+        private System.Windows.Forms.BindingSource bindingSource1;
     }
 }
