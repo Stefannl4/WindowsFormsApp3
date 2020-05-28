@@ -84,7 +84,6 @@
             this.CoachField.Name = "CoachField";
             this.CoachField.Size = new System.Drawing.Size(174, 26);
             this.CoachField.TabIndex = 3;
-            this.CoachField.Text = "CoachField";
             // 
             // TeamFieldL1
             // 
@@ -154,7 +153,6 @@
             this.TeamField.Name = "TeamField";
             this.TeamField.Size = new System.Drawing.Size(174, 26);
             this.TeamField.TabIndex = 11;
-            this.TeamField.Text = "TeamField";
             // 
             // InitButton
             // 
