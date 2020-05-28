@@ -87,7 +87,7 @@ namespace WindowsFormsApp3
             Stefan.Kledinggewassen = 5;
 
             Team vvRhoon = new Team();
-            vvRhoon.name = "Voetbal "+number;
+            vvRhoon.name = "Voetbal "+number;    
             vvRhoon.coachje = teamcoach;
             vvRhoon.teamleden.Add(Stefan);
             vvRhoon.teamleden.Add(Roel);
