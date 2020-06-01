@@ -8,43 +8,53 @@ namespace WindowsFormsApp3
 {
     public class Team
     {
-        public string name { get; set; }
-        public Coach coachje { get; set; }
-        public List<Speler> teamleden = new List<Speler>();
+        public string soortSport { get; set; }
+        public Coach Coach { get; set; }
+        public List<Speler> Teamleden = new List<Speler>();
+
+        public Speler getTeamLid(int nummer)
+        {
+            if (Teamleden.Count >= nummer + 1)
+                return Teamleden[nummer];
+            else
+                return new Speler();
+        }
+        public Team() { 
+            Coach = new Coach();
+        }
     }
-
-
     public abstract class Sporter
     {
-        public string naam { get; set; }
+        public string Naam { get; set; }
     }
     public class Coach : Sporter
     {
+        public Boolean Ehbo { get; set; }
     }
 
     public class Speler : Sporter
     {
         public int Kledinggewassen { get; set; }
     }
-
     public class run
     {
         public void test1()
         {
-            Coach teamcoach = new Coach();
-            teamcoach.naam = "Wesley";
+            Coach coach = new Coach();
+            coach.Naam = "Wesley";
 
             Speler Roel = new Speler();
-            Roel.naam = "RoXXel";
+            Roel.Naam = "Roel";
 
             Speler Stefan = new Speler();
-            Stefan.naam = "Stefan Ricardo";
+            Stefan.Naam = "Stefan Ricardo";
             Stefan.Kledinggewassen = 5;
 
             Team vvRhoon = new Team();
-            vvRhoon.coachje = teamcoach;
-            vvRhoon.teamleden[0] = Stefan;
-            vvRhoon.teamleden[1] = Roel;
+            vvRhoon.soortSport = "Voetbal";
+            vvRhoon.Coach = coach;
+            vvRhoon.Teamleden.Add(Stefan);
+            vvRhoon.Teamleden.Add(Roel);
 
         }
     }
