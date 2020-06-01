@@ -56,8 +56,8 @@ namespace WindowsFormsApp3
         {
             schermTeam.soortSport = SoortSportField.Text;
             schermTeam.Coach.Naam = CoachField.Text;
-            schermTeam.Teamleden[0].Naam = TeamField1.Text;
-            schermTeam.Teamleden[1].Naam = TeamField2.Text;
+            //schermTeam.Teamleden[0].Naam = TeamField1.Text;
+            //schermTeam.Teamleden[1].Naam = TeamField2.Text;
             //teamList.Add(schermTeam);
         }
 
