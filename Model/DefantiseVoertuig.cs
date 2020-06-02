@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApp3
+namespace WindowsFormsApp3.Model
 {
     public class Defensievoertuig : Voertuig
     {
-        
+
         //public string kenteken { get; }
         //public string kleur { get; }
         //public string omschrijving;
@@ -26,14 +26,15 @@ namespace WindowsFormsApp3
             omschrijving = omschrijving + oms;
         }
 
-        public void setKleur(string eenKleur )
+        public void setKleur(string eenKleur)
         {
             this.kleur = "groen";
         }
-  
+
         public void setKenteken(string kent)
         {
-             if (kent.StartsWith("K") | kent.StartsWith("L") ){
+            if (kent.StartsWith("K") | kent.StartsWith("L"))
+            {
 
             }
             else
@@ -44,4 +45,3 @@ namespace WindowsFormsApp3
         }
     }
 }
-

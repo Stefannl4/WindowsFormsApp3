@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApp3
+namespace WindowsFormsApp3.Model
 {
-
-
+    public abstract class Sporter
+    {
+        public string Naam { get; set; }
+    }
 }

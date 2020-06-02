@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp3.Model;
 //
 // Binding info
 // https://stackoverflow.com/questions/3567897/combobox-will-not-update-its-display-list-unless-you-change-selections-first

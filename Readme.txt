@@ -1,4 +1,6 @@
-﻿
+﻿---------------------------------------------------------------------------
+- SQL software laden
+---------------------------------------------------------------------------
 Tabellen of bestanden maken
 1, Connection class en zelf bouwen
 2. Entity Framework 6
@@ -9,11 +11,11 @@ Tabellen of bestanden maken
 >Nu het package manager
 >Package manager console
 Op het prompt kun je commando's intoetsen. Het volgende commanda laad het Entity Framework in je applciatie.
-PM> Install-Package Microsoft.EntityFrameworkCore.Sqlite
+PM> Install-Package Microsoft.EntityFrameworkCore.SqlServer
 
 
 In plaats hiervan kun je ook een inmemory optie of de sqlserver gebruiken:
-PM> Install-Package Microsoft.EntityFrameworkCore.SqlServer
+PM> Install-Package Microsoft.EntityFrameworkCore.Sqlite
 PM> Install-Package Microsoft.EntityFrameworkCore.Inmemory
 
 ---------------------------------------------------------------------------
@@ -37,6 +39,49 @@ Initieel de software laden
 >Package manager console
 PM> Install-Package Microsoft.EntityFrameworkCore.Tools
 
+---------------------------------------------------------------------------
+- Database voorzien van de laatste tabellen
+---------------------------------------------------------------------------
+
 En vervolgens bij elke update van de tabellen
-PM> Add-Migration  InitialCreate -Context  CasinoContext
-PM> Update-Database -c CasinoContext
+>Menu Tools
+>Nu het package manager
+>Package manager console
+PM> Add-Migration  InitialCreate -Context  MyContext
+PM> Update-Database -c MyContext
+
+---------------------------------------------------------------------------
+-- Modelling
+---------------------------------------------------------------------------
+https://docs.microsoft.com/en-us/ef/core/modeling/
+Definieer je eigen object (lees tabellen)
+
+Relaties tussen tabellen (1:1, 1:N, N:M)
+https://docs.microsoft.com/en-us/ef/core/modeling/relationships?tabs=fluent-api%2Cfluent-api-simple-key%2Csimple-key
+
+Statusveld conversie, of ook enum conversie
+https://docs.microsoft.com/en-us/ef/core/modeling/value-conversions
+
+---------------------------------------------------------------------------
+-- Database connectie maken
+---------------------------------------------------------------------------
+
+  public class MyContext : DbContext
+    {
+        public DbSet<Blog> Blog { get; set; }
+        public DbSet<Post> Posts { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("server=.;database=WindowsFormsApp3;trusted_connection=true;Integrated Security=True;");
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Blog>()
+                .HasIndex(b => b.Url)
+                .IsUnique();
+        }
+
+    }
+

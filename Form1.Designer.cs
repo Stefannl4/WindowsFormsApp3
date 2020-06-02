@@ -33,6 +33,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.TeamOpenButton = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -77,7 +78,7 @@
             // 
             // TeamOpenButton
             // 
-            this.TeamOpenButton.Location = new System.Drawing.Point(199, 221);
+            this.TeamOpenButton.Location = new System.Drawing.Point(336, 208);
             this.TeamOpenButton.Name = "TeamOpenButton";
             this.TeamOpenButton.Size = new System.Drawing.Size(270, 82);
             this.TeamOpenButton.TabIndex = 5;
@@ -85,11 +86,22 @@
             this.TeamOpenButton.UseVisualStyleBackColor = true;
             this.TeamOpenButton.Click += new System.EventHandler(this.TeamOpenButton_Click);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(112, 208);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(200, 88);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "MaakCoach";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(655, 375);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.TeamOpenButton);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button2);
@@ -111,6 +123,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button TeamOpenButton;
+        private System.Windows.Forms.Button button3;
     }
 }
 

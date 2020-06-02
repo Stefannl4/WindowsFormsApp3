@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp3.Model;
 
 namespace WindowsFormsApp3
 {
@@ -41,6 +42,20 @@ namespace WindowsFormsApp3
         {
             Form2 mijnwpf = new Form2();
             mijnwpf.Visible = true;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            using (var context = new MyContext())
+            {
+                var std = new Coach()
+                {
+                    Naam = "Steef"
+                };
+                context.Coach.Add(std);
+
+                context.SaveChanges();
+            }
         }
     }
 }

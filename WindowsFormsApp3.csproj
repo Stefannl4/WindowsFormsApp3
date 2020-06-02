@@ -174,7 +174,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Countries.cs" />
-    <Compile Include="Team.cs" />
+    <Compile Include="Migrations\20200602181226_InitialCreate.cs" />
+    <Compile Include="Migrations\20200602181226_InitialCreate.designer.cs">
+      <DependentUpon>20200602181226_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\MyContextModelSnapshot.cs" />
+    <Compile Include="Model\Blog.cs" />
+    <Compile Include="Model\Class1.cs" />
+    <Compile Include="Model\Coach.cs" />
+    <Compile Include="Model\DefantiseVoertuig.cs" />
+    <Compile Include="Model\Post.cs" />
+    <Compile Include="Model\MyContext.cs" />
+    <Compile Include="Model\Speler.cs" />
+    <Compile Include="Model\Sporter.cs" />
+    <Compile Include="Model\Team.cs" />
+    <Compile Include="Model\Voertuig.cs" />
+    <Compile Include="TeamTest.cs" />
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,7 +205,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Defensievoertuig.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
