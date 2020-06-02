@@ -74,6 +74,7 @@ https://docs.microsoft.com/en-us/ef/core/modeling/value-conversions
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("server=.;database=WindowsFormsApp3;trusted_connection=true;Integrated Security=True;");
+            //optionsBuilder.UseSqlServer("Server=.\\SQLExpress;Database=SchoolDB;Trusted_Connection=True;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -84,4 +85,13 @@ https://docs.microsoft.com/en-us/ef/core/modeling/value-conversions
         }
 
     }
-
+---------------------------------------------------------------------------
+-- Ouderwetse database connectie maken
+---------------------------------------------------------------------------        
+        SqlDataReader rdr = null;
+        SqlConnection conn = new SqlConnection("Data Source=(local);Initial Catalog=Northwind;Integrated Security=SSPI");
+        conn.Open();
+        SqlCommand cmd = new SqlCommand("select * from Customers", conn);
+        rdr = cmd.ExecuteReader();
+        
+        conn.Close();
